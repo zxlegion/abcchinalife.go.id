@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>Touched?:v Awokwowkwo</title>
+<center>
+
+<H2>
+<SCRIPT language=JavaScript1.2>
+
+//Neon Lights Text II
+//Visit http://www.rainbow.arch.scriptmania.com for this script 
+
+
+///Edit below this line/////
+
+var message=" For You My Love "
+var neonbasecolor="black"
+var neontextcolor="Cyan"
+var neontextcolor2="red"   //Lighter lime
+var flashspeed=50						// speed of flashing in milliseconds
+var flashingletters=3 					// number of letters flashing in neontextcolor
+var flashingletters2=3 					// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0					// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+</SCRIPT>
+</H2>
+</center>
+<!--Then copy and paste below into <HEAD> of your HTML document  -->
+
+<SCRIPT language="JavaScript"  type="text/javascript">
+/*
+Animate your text - Script
+Visit http://rainbow.arch.scriptmania.com/scripts/
+ for this script and many more
+*/
+        var ie4 = false;
+        if(document.all) {
+                ie4 = true; 
+        }       
+        function setContent(name, value) {
+                var d;  
+                if (ie4) { 
+                        d = document.all[name];
+                } else {
+                        d = document.getElementById(name);
+                }       
+                d.innerHTML = value;    
+        }       
+
+	function getContent(name) {
+		var d;
+                if (ie4) {
+                        d = document.all[name];
+                } else {
+                        d = document.getElementById(name);
+                }
+                return d.innerHTML;
+	}
+
+        function setColor(name, value) {
+                var d;  
+                if (ie4) { 
+                        d = document.all[name];
+                } else {
+                        d = document.getElementById(name);
+                }
+                d.style.color = value;  
+        }
+
+	function getColor(name) {
+                var d;
+                if (ie4) {
+                        d = document.all[name];
+                } else {
+                        d = document.getElementById(name);
+                }
+                return d.style.color;
+        }
+
+        function animate(name, col) {
+		var value = getContent(name);
+		if (value.indexOf('<span') >= 0) { return; }
+		var length = 0;
+                var str = '';
+		var ch;
+		var token = '';
+		var htmltag = false;	
+                for (i = 0; i < value.length; i++) {
+			ch = value.substring(i, i+1);
+			if (i < value.length - 1) { nextch = value.substring(i+1, i+2); } else { nextch = ' '; }
+			token += ch;
+			if (ch == '<' && '/aAbBpPhHiIoOuUlLtT'.indexOf(nextch) >= 0) { htmltag = true; }
+			if (ch == '>' && htmltag) { htmltag = false; }
+			if (!htmltag && ch.charCodeAt(0) > 30 && ch != ' ' && ch != '\n') {		
+                        	str += '<span id="' + name + '_' + length + '">' + token + '</span>';
+				token = '';
+				length++;
+			}
+                }
+                setContent(name, str);
+                command = 'animateloop(\'' + name + '\', ' + length + ', 0, 1, \'' + col + '\')';
+                setTimeout(command , 100);
+        }
+
+        function animateloop(name, length, ind, delta, col) {
+		var next = ind + delta;
+		if (next >= length) { delta = delta * -1; next = ind + delta; }
+		if (next < 0) { delta = delta * -1; next = ind + delta; }
+                setColor(name + '_' + ind, getColor(name + '_' + next));
+                setColor(name + '_' + next, col);
+                command = 'animateloop(\'' + name + '\', ' + length + ', ' + next + ', ' + delta + ', \'' + col + '\')';
+                setTimeout(command , 100);
+        }
+</SCRIPT>
+ </head>
+	 <body>
+	<body bgcolor="black">
+	<br><br>
+	<center>
+	<img src="https://3.top4top.net/p_1253fjxm50.gif"></img></center>
+	<br>
+	<center><font color="cyan" size="5">Untuk apa saya mencari sosok lain jika kamu sudah lebih dari sempurna bagiku, Aku hanya Ingin Memilikimu Sepenuhnya :) tolong jangan pernah berubah dan tetaplah setia :)</font></center>
+	<br><br>
+	<center><font color="cyan" size "5"><marquee scrollamount="5" direction="right" width="80%">root@./ExGeneralTz  |  Zak_SVCKS  |  MoonDeath  |  Vian_14  |  Xneo•Athena  |  Mr.Up3ry0  |  SKy • ./Chrstphr_  |  r00t@star </marquee>
+  <font color="red" size "5"><marquee scrollamount="5" direction="left" width="80%"> INSOMNIA CYBER TEAM  |  ALL SIBER BROTHERHOOD  | CYBER TROJAN INDONESIA</marquee>
+<br><br>
+<SPAN ID="animate"><a href="https://zxlegion.blogspot.com"><B>My Blog</B></SPAN>
+<SCRIPT language="JavaScript">
+animate('animate', 'cyan');
+</SCRIPT>
+</center>
+<br><br>
+
+	<center>
+	<audio controls="autoplay" src="https://2.top4top.net/m_1253r5nez0.mp3"></audio></center> 
+	
+	
+	<SCRIPT type="text/javascript">
+/*
+Snow Fall 1 - no images - Java Script
+Visit /
+  for this script and many more
+*/
+
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=20
+
+// Set the colors for the snow. Add as many colors as you like
+var snowcolor=new Array("#aaaacc","#ccccdd","#f3f3f3","#f0ffff","lime","cyan","gold")
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype=new Array("Times","Arial","Times","Verdana")
+
+// Set the letter that creates your snowflake (recommended: * )
+var snowletter="*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=1
+
+// Set the maximum-size of your snowflakes
+var snowmaxsize=40
+
+// Set the minimal-size of your snowflakes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=1
+
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION ENDS HERE
+///////////////////////////////////////////////////////////////////////////
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {
+        rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+        if (ie5 || opera) {
+                marginbottom = document.body.scrollHeight
+                marginright = document.body.clientWidth-15
+        }
+        else if (ns6) {
+                marginbottom = document.body.scrollHeight
+                marginright = window.innerWidth-15
+        }
+        var snowsizerange=snowmaxsize-snowminsize
+        for (i=0;i<=snowmax;i++) {
+                crds[i] = 0;
+            lftrght[i] = Math.random()*15;
+            x_mv[i] = 0.03 + Math.random()/10;
+                snow[i]=document.getElementById("s"+i)
+                snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+                snow[i].size=randommaker(snowsizerange)+snowminsize
+                snow[i].style.fontSize=snow[i].size+'px';
+                snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+                snow[i].style.zIndex=1000
+                snow[i].sink=sinkspeed*snow[i].size/5
+                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+                snow[i].style.left=snow[i].posx+'px';
+                snow[i].style.top=snow[i].posy+'px';
+        }
+        movesnow()
+}
+
+function movesnow() {
+        for (i=0;i<=snowmax;i++) {
+                crds[i] += x_mv[i];
+                snow[i].posy+=snow[i].sink
+                snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
+                snow[i].style.top=snow[i].posy+'px';
+
+                if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+                        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                        snow[i].posy=0
+                }
+        }
+        var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+        document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+        window.onload=initsnow
+}
+
+</SCRIPT>
+
+	 </body>
+ </html>
