@@ -1,302 +1,584 @@
-<html>
-<head>
-<title>Touched?:v Awokwowkwo</title>
+<center>
+<body bgcolor=black>
+<marquee><title>Your System Is Jembod</title></marquee>
+<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>
+<style type="text/css">
+h1 {color: #333;font-size: 70px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
+.neon {color: #FFFFFF;text-shadow: 0 0 5px #1ab4e7, 0 0 10px #1ab4e7, 0 0 30px #18a2d0, 0 0 45px #18a2d0, 0 0 60px #18a2d0;}
+
+
+
+.matrix {color: #FFFFFF; font-family:Arial, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+.jokitz1{
+        text-align : center;
+        }
+.jokitz2{
+        text-align : center;
+        font-family : Courier;
+        }
+</style>
+<script type="text/javascript">
+
+<!--
+
+//Disable right click script
+
+//visit http://www.rainbow.arch.scriptmania.com/scripts/
+
+var message="Sorry, right-click has been disabled";
+
+///////////////////////////////////
+
+function clickIE() {if (document.all) {(message);return false;}}
+
+function clickNS(e) {if
+
+(document.layers||(document.getElementById&&!document.all)) {
+
+if (e.which==2||e.which==3) {(message);return false;}}}
+
+if (document.layers)
+
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+
+// -->
+
+</script>
+
+<!-- <script language="JavaScript1.2" type="text/javascript">
+
+function ClearError() {return true;}
+
+window.onerror = ClearError;
+
+</script> -->
+
+
+
+<script type="text/javascript" language="javascript">
+
+<!--
+
+var rows=1; // must be an odd number
+
+var speed=10; // lower is faster
+
+var reveal=2; // between 0 and 2 only. The higher, the faster the word appears
+
+var effectalign="center" //enter "center" to center it.
+
+
+
+/***********************************************
+
+* The Matrix Text Effect- by Richard Womersley (http://www.mf2fm.co.uk/rv)
+
+* This notice must stay intact for use
+<embed src="https://youtu.be/Io0fBr1XBUA&autoplay=1" type="application/x-shockwave-flash"wmode="transparent" width="1" height="1"></embed>
+
+* Visit http://www.dynamicdrive.com/ for full source code
+
+***********************************************/
+
+
+
+
+var w3c=document.getElementById && !window.opera;;
+
+var ie45=document.all && !window.opera;
+
+var ma_tab, matemp, ma_bod, ma_row, x, y, columns, ma_txt, ma_cho;
+
+var m_coch=new Array();
+
+var m_copo=new Array();
+
+window.onload=function() {
+
+        if (!w3c && !ie45) return
+
+  var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];
+
+  ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;
+
+  ma_txt=" "+ma_txt+" ";
+
+  columns=ma_txt.length;
+
+  if (w3c) {
+
+    while (matrix.childNodes.length) matrix.removeChild(matrix.childNodes[0]);
+
+    ma_tab=document.createElement("table");
+
+    ma_tab.setAttribute("border", 0);
+
+    ma_tab.setAttribute("align", effectalign);
+
+    ma_tab.style.backgroundColor="#000000";
+
+    ma_bod=document.createElement("tbody");
+
+    for (x=0; x<rows; x++) {
+
+      ma_row=document.createElement("tr");
+
+      for (y=0; y<columns; y++) {
+
+        matemp=document.createElement("td");
+
+        matemp.setAttribute("id", "Mx"+x+"y"+y);
+
+        matemp.className="matrix";
+
+        matemp.appendChild(document.createTextNode(String.fromCharCode(160)));
+
+        ma_row.appendChild(matemp);
+
+      }
+
+      ma_bod.appendChild(ma_row);
+
+    }
+
+    ma_tab.appendChild(ma_bod);
+
+    matrix.appendChild(ma_tab);
+
+  } else {
+
+    ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#000000">';
+
+    for (var x=0; x<rows; x++) {
+
+      ma_tab+='<t'+'r>';
+
+      for (var y=0; y<columns; y++) {
+
+        ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'"> </'+'td>';
+
+      }
+
+      ma_tab+='</'+'tr>';
+
+    }
+
+    ma_tab+='</'+'table>';
+
+    matrix.innerHTML=ma_tab;
+
+  }
+
+  ma_cho=ma_txt;
+
+  for (x=0; x<columns; x++) {
+
+    ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));
+
+    m_copo[x]=0;
+
+  }
+
+  ma_bod=setInterval("mytricks()", speed);
+
+}
+
+
+
+function mytricks() {
+
+  x=0;
+
+  for (y=0; y<columns; y++) {
+
+    x=x+(m_copo[y]==100);
+
+    ma_row=m_copo[y]%100;
+
+    if (ma_row && m_copo[y]<100) {
+
+      if (ma_row<rows+1) {
+
+        if (w3c) {
+
+          matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);
+
+          matemp.firstChild.nodeValue=m_coch[y];
+
+        }
+
+        else {
+
+          matemp=document.all["Mx"+(ma_row-1)+"y"+y];
+
+          matemp.innerHTML=m_coch[y];
+
+        }
+
+        matemp.style.color="#81F2FF";
+
+        matemp.style.fontWeight="bold";
+
+      }
+
+      if (ma_row>1 && ma_row<rows+2) {
+
+        matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];
+
+        matemp.style.fontWeight="normal";
+
+        matemp.style.color="#00BBFF";
+
+      }
+
+      if (ma_row>2) {
+
+          matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];
+
+        matemp.style.color="#20FFDA";
+
+      }
+
+      if (ma_row<Math.floor(rows/2)+1) m_copo[y]++;
+
+      else if (ma_row==Math.floor(rows/2)+1 && m_coch[y]==ma_txt.charAt(y)) zoomer(y);
+
+      else if (ma_row<rows+2) m_copo[y]++;
+
+      else if (m_copo[y]<100) m_copo[y]=0;
+
+    }
+
+    else if (Math.random()>0.9 && m_copo[y]<100) {
+
+      m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));
+
+      m_copo[y]++;
+
+    }
+
+  }
+
+  if (x==columns) clearInterval(ma_bod);
+
+}
+
+
+
+function zoomer(ycol) {
+
+  var mtmp, mtem, ytmp;
+
+  if (m_copo[ycol]==Math.floor(rows/2)+1) {
+
+    for (ytmp=0; ytmp<rows; ytmp++) {
+
+      if (w3c) {
+
+        mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);
+
+        mtmp.firstChild.nodeValue=m_coch[ycol];
+
+      }
+
+      else {
+
+        mtmp=document.all["Mx"+ytmp+"y"+ycol];
+
+        mtmp.innerHTML=m_coch[ycol];
+
+      }
+
+      mtmp.style.color="#5BEEFF";
+
+      mtmp.style.fontWeight="bold";
+
+    }
+
+    if (Math.random()<reveal) {
+
+      mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));
+
+      ma_cho=ma_cho.substring(0, mtmp)+ma_cho.substring(mtmp+1, ma_cho.length);
+
+    }
+
+    if (Math.random()<reveal-1) ma_cho=ma_cho.substring(0, ma_cho.length-1);
+
+    m_copo[ycol]+=199;
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  else if (m_copo[ycol]>200) {
+
+    if (w3c) {
+
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);
+
+      mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);
+
+    }
+
+    else {
+
+      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+
+      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+
+    }
+
+    mtmp.style.fontWeight="normal";
+
+    mtem.style.fontWeight="normal";
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  else if (m_copo[ycol]==200) m_copo[ycol]=100+Math.floor(rows/2);
+
+  if (m_copo[ycol]>100 && m_copo[ycol]<200) {
+
+    if (w3c) {
+
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);
+
+      mtmp.firstChild.nodeValue=String.fromCharCode(160);
+
+      mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);
+
+      mtem.firstChild.nodeValue=String.fromCharCode(160);
+
+    }
+
+    else {
+
+      mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];
+
+      mtmp.innerHTML=String.fromCharCode(160);
+
+      mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];
+
+      mtem.innerHTML=String.fromCharCode(160);
+
+    }
+
+    setTimeout("zoomer("+ycol+")", speed);
+
+  }
+
+  
+
+  //start
+
+var h1 = document.getElementsByTagName("h1")[0],
+
+text = h1.innerText || h1.textContent,
+
+split = [], i, lit = 0, timer = null;
+
+for(i = 0; i < text.length; ++i) {
+
+split.push("<span>" + text[i] + "</span>");
+
+}
+
+h1.innerHTML = split.join("");
+
+split = h1.childNodes;
+
+
+
+var flicker = function() {
+
+lit += 0.01;
+
+if(lit >= 1) {
+
+clearInterval(timer);
+
+}
+
+for(i = 0; i < split.length; ++i) {
+
+if(Math.random() < lit) {
+
+split[i].className = "neon";
+
+} else {
+
+split[i].className = "";
+
+}
+
+}
+
+}
+
+setInterval(flicker, 200);
+
+
+
+}
+
+//strat sec
+
+// end  -->
+
+</script>
+<link rel="openid.server" href="http://www.blogger.com/openid-server.g" />
+</head>
 <center>
 
-<H2>
-<SCRIPT language=JavaScript1.2>
+<br>
 
-//Neon Lights Text II
-//Visit http://www.rainbow.arch.scriptmania.com for this script 
+<h1>Hacked By "ZxLegion"</h1>
+					
 
+<div id="matrix" class="style25">Your Security Just Like Your Kontol  ^_^</div>
 
-///Edit below this line/////
-
-var message=" For You My Love "
-var neonbasecolor="black"
-var neontextcolor="Cyan"
-var neontextcolor2="red"   //Lighter lime
-var flashspeed=50						// speed of flashing in milliseconds
-var flashingletters=3 					// number of letters flashing in neontextcolor
-var flashingletters2=3 					// number of letters flashing in neontextcolor2 (0 to disable)
-var flashpause=0					// the pause between flash-cycles in milliseconds
-
-///No need to edit below this line/////
-
-var n=0
-if (document.all||document.getElementById){
-document.write('<font color="'+neonbasecolor+'">')
-for (m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')
-}
-else
-document.write(message)
-
-function crossref(number){
-var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
-return crossobj
-}
-
-function neon(){
-
-//Change all letters to base color
-if (n==0){
-for (m=0;m<message.length;m++)
-crossref(m).style.color=neonbasecolor
-}
-
-//cycle through and change individual letters to neon color
-crossref(n).style.color=neontextcolor
-
-if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
-if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+</font>
+<center>
+<font size="5" color="red">InsomXploit, <font color="gold"> Wuss <font color="cyan">Here :v</font>
+</script><center>
 
 
-if (n<message.length-1)
-n++
-else{
-n=0
-clearInterval(flashing)
-setTimeout("beginneon()",flashpause)
-return
-}
-}
+<img src="https://6.top4top.net/p_1278gzpla0.gif" width="750" height="750"></center>
 
-function beginneon(){
-if (document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)
-}
-beginneon()
-</SCRIPT>
-</H2>
-</center>
-<!--Then copy and paste below into <HEAD> of your HTML document  -->
+<div align="center"><table border="0 width="40%"><tr><td>
 
-<SCRIPT language="JavaScript"  type="text/javascript">
-/*
-Animate your text - Script
-Visit http://rainbow.arch.scriptmania.com/scripts/
- for this script and many more
-*/
-        var ie4 = false;
-        if(document.all) {
-                ie4 = true; 
-        }       
-        function setContent(name, value) {
-                var d;  
-                if (ie4) { 
-                        d = document.all[name];
-                } else {
-                        d = document.getElementById(name);
-                }       
-                d.innerHTML = value;    
-        }       
+h2{color: #333;font-size: 70px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:transformer;}<center><SCRIPT>
 
-	function getContent(name) {
-		var d;
-                if (ie4) {
-                        d = document.all[name];
-                } else {
-                        d = document.getElementById(name);
-                }
-                return d.innerHTML;
-	}
+farbbibliothek = new Array(); 
 
-        function setColor(name, value) {
-                var d;  
-                if (ie4) { 
-                        d = document.all[name];
-                } else {
-                        d = document.getElementById(name);
-                }
-                d.style.color = value;  
-        }
+farbbibliothek [0] = new Array("000000","000066","000099","0000FF","0066FF","00CCFF","00FFFF","00FF99","00FF33","00FF00","00CC00","009900","006600","003300","333300","663300","666600","CC9900","FF9900","FF6600","FF3300","FF3366","FF0066","FF0099","FF00FF","FF66FF","FF6699","FF6666","FF6600","FFCC00","FFCC66","FFFF99","FFFF66","FFFF00","CCFF00","CCFF66","CCFFCC","CCFFFF","99FFFF","66FFFF","66FF99");
 
-	function getColor(name) {
-                var d;
-                if (ie4) {
-                        d = document.all[name];
-                } else {
-                        d = document.getElementById(name);
-                }
-                return d.style.color;
-        }
+farben = farbbibliothek[0];
 
-        function animate(name, col) {
-		var value = getContent(name);
-		if (value.indexOf('<span') >= 0) { return; }
-		var length = 0;
-                var str = '';
-		var ch;
-		var token = '';
-		var htmltag = false;	
-                for (i = 0; i < value.length; i++) {
-			ch = value.substring(i, i+1);
-			if (i < value.length - 1) { nextch = value.substring(i+1, i+2); } else { nextch = ' '; }
-			token += ch;
-			if (ch == '<' && '/aAbBpPhHiIoOuUlLtT'.indexOf(nextch) >= 0) { htmltag = true; }
-			if (ch == '>' && htmltag) { htmltag = false; }
-			if (!htmltag && ch.charCodeAt(0) > 30 && ch != ' ' && ch != '\n') {		
-                        	str += '<span id="' + name + '_' + length + '">' + token + '</span>';
-				token = '';
-				length++;
-			}
-                }
-                setContent(name, str);
-                command = 'animateloop(\'' + name + '\', ' + length + ', 0, 1, \'' + col + '\')';
-                setTimeout(command , 100);
-        }
+function farbschrift() 
 
-        function animateloop(name, length, ind, delta, col) {
-		var next = ind + delta;
-		if (next >= length) { delta = delta * -1; next = ind + delta; }
-		if (next < 0) { delta = delta * -1; next = ind + delta; }
-                setColor(name + '_' + ind, getColor(name + '_' + next));
-                setColor(name + '_' + next, col);
-                command = 'animateloop(\'' + name + '\', ' + length + ', ' + next + ', ' + delta + ', \'' + col + '\')';
-                setTimeout(command , 100);
-        }
-</SCRIPT>
- </head>
-	 <body>
-	<body bgcolor="black">
-	<br><br>
-	<center>
-	<img src="https://3.top4top.net/p_1253fjxm50.gif"></img></center>
-	<br>
-	<center><font color="cyan" size="5">Untuk apa saya mencari sosok lain jika kamu sudah lebih dari sempurna bagiku, Aku hanya Ingin Memilikimu Sepenuhnya :) tolong jangan pernah berubah dan tetaplah setia :)</font></center>
-	<br><br>
-	<center><font color="cyan" size "5"><marquee scrollamount="5" direction="right" width="80%">root@./ExGeneralTz  |  Zak_SVCKS  |  MoonDeath  |  Vian_14  |  Xneo•Athena  |  Mr.Up3ry0  |  SKy • ./Chrstphr_  |  r00t@star </marquee>
-  <font color="red" size "5"><marquee scrollamount="5" direction="left" width="80%"> INSOMNIA CYBER TEAM  |  ALL SIBER BROTHERHOOD  | CYBER TROJAN INDONESIA</marquee>
-<br><br>
-<SPAN ID="animate"><a href="https://zxlegion.blogspot.com"><B>My Blog</B></SPAN>
-<SCRIPT language="JavaScript">
-animate('animate', 'cyan');
-</SCRIPT>
-</center>
-<br><br>
+{ 
 
-	<center>
-	<audio controls="autoplay" src="https://2.top4top.net/m_1253r5nez0.mp3"></audio></center> 
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.all["a"+i].style.color=farben[i]; 
+
+} 
+
+farbverlauf(); 
+
+} 
+
+function string2array(text) 
+
+{ 
+
+Buchstabe = new Array(); 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+k=0; 
+
+while(k<=text.length) 
+
+{ 
+
+Buchstabe[k] = text.charAt(k); 
+
+k++; 
+
+} 
+
+} 
+
+function divserzeugen() 
+
+{ 
+
+for(var i=0 ; i<Buchstabe.length; i++) 
+
+{ 
+
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>"); 
+
+} 
+
+farbschrift(); 
+
+} 
+
+var a=1; 
+
+function farbverlauf() 
+
+{ 
+
+for(var i=0 ; i<farben.length; i++) 
+
+{ 
+
+farben[i-1]=farben[i]; 
+
+} 
+
+farben[farben.length-1]=farben[-1]; 
+
+setTimeout("farbschrift()",30); 
+
+} 
+
+// 
+
+var farbsatz=1; 
+
+function farbtauscher() 
+
+{ 
+
+farben = farbbibliothek[farbsatz]; 
+
+while(farben.length<text.length) 
+
+{ 
+
+farben = farben.concat(farben); 
+
+} 
+
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001)); 
+
+} 
+
+setInterval("farbtauscher()",5000000000);
+
+text =".::~OFFICIAL MEMBER::.~";//h 
+
+string2array(text);
+
+divserzeugen(); 
+
+//document.write(text); 
+
+</SCRIPT></center></h1></font><center>
+<center>
+<div style="text-shadow: 10px 10px 10px green;"><span style="color:white;"><font face="transformers"><b><marquee style="border:white 2px solid">./ExGeneralTz  <font color="white"> [+] <span style="color:Red"> Kurniawan <span style="color: white;"> [+] <span style="color:lime;"> CL4Y0101 <span style="color: white;"> [+] <span style="color:cyan;"> Icha(Nona Manis) <span style="color: white;"> [+]<span style="color:gold;">Monaanggraeniputri<span style="color: white;"> [+]<span style="color:wheat;">MooNDeatH<span style="color: white;"> [+]<span style="color:yellow;">CtrGans<span style="color: white;"> [+]<span style="color:blue;">TN•√N3W4N4_DRACK||<span style="color: white;"> [+]<span style="color: cyan;">./ZryTect<span style="color: white;"> [+]<span style="color: lime;"> Lala Ganz<span style="color: white;"> [+]</marquee></font></script>
+
+<br><br><br>
+<audio autoplay="autoplay" controls="controls" src="https://api.soundcloud.com/tracks/44119460/stream?client_id=a3e059563d7fd3372b49b37f00a00bcf" type="audio/mpeg"></audio>
 	
-	
-	<SCRIPT type="text/javascript">
-/*
-Snow Fall 1 - no images - Java Script
-Visit /
-  for this script and many more
-*/
-
-// Set the number of snowflakes (more than 30 - 40 not recommended)
-var snowmax=20
-
-// Set the colors for the snow. Add as many colors as you like
-var snowcolor=new Array("#aaaacc","#ccccdd","#f3f3f3","#f0ffff","lime","cyan","gold")
-
-// Set the fonts, that create the snowflakes. Add as many fonts as you like
-var snowtype=new Array("Times","Arial","Times","Verdana")
-
-// Set the letter that creates your snowflake (recommended: * )
-var snowletter="*"
-
-// Set the speed of sinking (recommended values range from 0.3 to 2)
-var sinkspeed=1
-
-// Set the maximum-size of your snowflakes
-var snowmaxsize=40
-
-// Set the minimal-size of your snowflakes
-var snowminsize=8
-
-// Set the snowing-zone
-// Set 1 for all-over-snowing, set 2 for left-side-snowing
-// Set 3 for center-snowing, set 4 for right-side-snowing
-var snowingzone=1
-
-///////////////////////////////////////////////////////////////////////////
-// CONFIGURATION ENDS HERE
-///////////////////////////////////////////////////////////////////////////
-
-
-// Do not edit below this line
-var snow=new Array()
-var marginbottom
-var marginright
-var timer
-var i_snow=0
-var x_mv=new Array();
-var crds=new Array();
-var lftrght=new Array();
-var browserinfos=navigator.userAgent
-var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-var ns6=document.getElementById&&!document.all
-var opera=browserinfos.match(/Opera/)
-var browserok=ie5||ns6||opera
-
-function randommaker(range) {
-        rand=Math.floor(range*Math.random())
-    return rand
-}
-
-function initsnow() {
-        if (ie5 || opera) {
-                marginbottom = document.body.scrollHeight
-                marginright = document.body.clientWidth-15
-        }
-        else if (ns6) {
-                marginbottom = document.body.scrollHeight
-                marginright = window.innerWidth-15
-        }
-        var snowsizerange=snowmaxsize-snowminsize
-        for (i=0;i<=snowmax;i++) {
-                crds[i] = 0;
-            lftrght[i] = Math.random()*15;
-            x_mv[i] = 0.03 + Math.random()/10;
-                snow[i]=document.getElementById("s"+i)
-                snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
-                snow[i].size=randommaker(snowsizerange)+snowminsize
-                snow[i].style.fontSize=snow[i].size+'px';
-                snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
-                snow[i].style.zIndex=1000
-                snow[i].sink=sinkspeed*snow[i].size/5
-                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-                snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
-                snow[i].style.left=snow[i].posx+'px';
-                snow[i].style.top=snow[i].posy+'px';
-        }
-        movesnow()
-}
-
-function movesnow() {
-        for (i=0;i<=snowmax;i++) {
-                crds[i] += x_mv[i];
-                snow[i].posy+=snow[i].sink
-                snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
-                snow[i].style.top=snow[i].posy+'px';
-
-                if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
-                        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-                        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-                        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-                        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-                        snow[i].posy=0
-                }
-        }
-        var timer=setTimeout("movesnow()",50)
-}
-
-for (i=0;i<=snowmax;i++) {
-        document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
-}
-if (browserok) {
-        window.onload=initsnow
-}
-
-</SCRIPT>
-
-	 </body>
- </html>
+</body>
+</html>
